@@ -20,3 +20,9 @@ jobs:
 #        run: cd SRC/MBusinoAP/  # Ersetzen Sie dies durch den Pfad zu Ihrem Projekt, falls erforderlich
       - name: Build PlatformIO Project
         run: pio run
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware-binaries
+          path: |
+            .pio/build/**/firmware.bin
