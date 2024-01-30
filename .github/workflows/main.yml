@@ -22,7 +22,5 @@ jobs:
         run: pip install --upgrade platformio
       - name: Change to Project Directory
         run: cd SRC/MBusinoAP/  # Ersetzen Sie dies durch den Pfad zu Ihrem Projekt, falls erforderlich
-      - name: Build PlatformIO examples
-        run: pio ci
-        env:
-          PLATFORMIO_CI_SRC: ${{ matrix.example }}
+      - name: Build PlatformIO Project
+        run: pio run
